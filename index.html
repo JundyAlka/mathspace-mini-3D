@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathSpace Mini</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo MathSpace Mini" class="logo">
+        <h1>MathSpace Mini</h1>
+    </header>
+    <main class="container">
+        <!-- Kolom 1: Pilih Bangun -->
+        <aside class="sidebar" id="shape-selector">
+            <h2>Pilih Bangun Ruang</h2>
+            <div class="shape-options">
+                <button id="select-cube" data-shape="cube" class="active">Kubus</button>
+                <button id="select-box" data-shape="box">Balok</button>
+                <button id="select-cylinder" data-shape="cylinder">Tabung</button>
+            </div>
+            <button id="reset-camera-btn" class="action-btn">Reset Kamera</button>
+        </aside>
+
+        <!-- Kolom 2: Canvas 3D -->
+        <section class="canvas-container">
+            <div id="canvas-container" style="width: 100%; height: 100%;">
+                <!-- Three.js canvas will be appended here -->
+            </div>
+        </section>
+
+        <!-- Kolom 3: Parameter dan Hasil -->
+        <aside class="sidebar" id="parameter-panel">
+            <h2>Parameter & Hasil</h2>
+            <div id="shape-info">
+                <!-- Shape-specific inputs will be rendered here by ui.js -->
+            </div>
+            <div id="calculation-results">
+                <!-- Calculation results will be rendered here by ui.js -->
+            </div>
+            <div class="net-controls">
+                <button id="toggle-net-btn" class="action-btn">Tampilkan Net</button>
+            </div>
+            <div id="net-viewer" class="net-viewer hidden">
+                <img id="net-image" src="" alt="Jaring-jaring Bangun Ruang">
+            </div>
+        </aside>
+    </main>
+
+    <!-- Three.js and OrbitControls via CDN -->
+    <!-- Using a stable version of Three.js and OrbitControls -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+    
+    <!-- Add dat.GUI for debugging (optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    
+    <!-- No inline styles - all styles are in base.css -->
+
+    <!-- Local Scripts -->
+    <script src="src/math.js"></script>
+    <script src="src/shapes.js"></script>
+    <script src="src/ui.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
