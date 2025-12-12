@@ -56,6 +56,22 @@
                 </div>
             </div>
 
+            <!-- New: Dimension Controls -->
+            <div id="dimension-controls" class="parameter-group">
+                <h3>Atur Ukuran</h3>
+                <div id="dimensions-container">
+                    <!-- Inputs injected by JS -->
+                </div>
+            </div>
+
+            <!-- New: Formula Display -->
+            <div id="educational-info" class="info-box">
+                <h3>Rumus & Kalkulasi</h3>
+                <div id="formula-display">
+                    <!-- Formulas injected by JS -->
+                </div>
+            </div>
+
             <div id="shape-description" class="info-box">
                 <!-- Description will be injected here -->
             </div>
@@ -66,6 +82,10 @@
     <!-- Using a stable version of Three.js and OrbitControls -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+
+    <!-- MathJax for Formula Rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <!-- Add dat.GUI for debugging (optional) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>

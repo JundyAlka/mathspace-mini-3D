@@ -55,15 +55,15 @@ header::before {
 }
 
 header .logo {
-    height: 70px;  
-    margin-right: 1.5rem;  
+    height: 70px;
+    margin-right: 1.5rem;
     vertical-align: middle;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));  
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 header .logo:hover {
-    transform: rotate(10deg) scale(1.1);  
+    transform: rotate(10deg) scale(1.1);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
 }
 
@@ -248,10 +248,10 @@ header h1 {
 
 /* Parameter Groups - Enhanced Design */
 .parameter-group {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background: linear-gradient(145deg, #ffffff, #f8faff);
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 1rem;
+    border-radius: 8px;
     border: none;
     box-shadow: 0 8px 24px rgba(67, 97, 238, 0.08);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -336,9 +336,9 @@ header h1 {
 
 .parameter input {
     width: 100%;
-    padding: 1rem 1.2rem;
-    border: 2px solid #e0e8ff;
-    border-radius: 12px;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
     font-size: 1.05rem;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.9);
@@ -401,11 +401,11 @@ header h1 {
         flex-direction: column;
         gap: 1.2rem;
     }
-    
+
     .parameter input {
         padding: 0.9rem 1.1rem;
     }
-    
+
     .parameter-group {
         padding: 1.2rem;
     }
@@ -492,7 +492,7 @@ header h1 {
     .container {
         padding: 1.5rem;
     }
-    
+
     .sidebar {
         width: 280px;
     }
@@ -502,12 +502,12 @@ header h1 {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         margin-bottom: 1.5rem;
     }
-    
+
     .canvas-container {
         min-height: 500px;
     }
@@ -517,11 +517,11 @@ header h1 {
     header h1 {
         font-size: 1.75rem;
     }
-    
+
     .container {
         padding: 1rem;
     }
-    
+
     .shape-options {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -529,13 +529,27 @@ header h1 {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Utility Classes */
